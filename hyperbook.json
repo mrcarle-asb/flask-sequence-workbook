@@ -1,0 +1,14 @@
+{
+  "name": "Flask Sequence",
+  "description": "A sequenced workbook for learning Flask — from zero to CRUD",
+  "language": "en",
+  "search": true,
+  "author": {
+    "name": "Mr. Carle"
+  },
+  "colors": {
+    "brand": "#336699"
+  },
+  "basePath": "/flask-sequence-workbook",
+  "allowDangerousHtml": true
+}
