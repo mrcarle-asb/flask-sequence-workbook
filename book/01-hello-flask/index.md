@@ -13,9 +13,9 @@ This week you build your first Flask app — a Python program that serves web pa
 
 ## Why Flask?
 
-Your IB Internal Assessment requires you to build a working software solution for a real client. For most of you, that will be a web application — and Flask is the tool we use to build it.
+At the end of this course, you need to be able to build a working web application. That's table stakes — the minimum skill set you need before you can even start thinking about your own project.
 
-This sequence teaches you Flask one piece at a time so that when you sit down to design your own app, you've already done each piece before. Separately. In order. With bumpers.
+Flask is the tool we use to get there. This sequence teaches it one piece at a time, so that when you sit down to build something real, you've already done each piece before. Separately. In order. With bumpers.
 
 ## What you already know
 
@@ -33,7 +33,7 @@ This sequence teaches you Flask one piece at a time so that when you sit down to
 
 ## The assignment
 
-By the end of this week you'll have a multi-route Flask app where each URL serves a different HTML page from the `templates/` folder. This is the skeleton that every Flask project — including your IA — will be built on.
+By the end of this week you'll have a multi-route Flask app where each URL serves a different HTML page from the `templates/` folder. This is the skeleton that every Flask project is built on — including the one you'll build on your own in Week 6.
 
 :::alert{info}
 Read the pages in this section in order. Each one builds on the last.

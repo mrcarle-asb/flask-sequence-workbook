@@ -6,9 +6,11 @@ name: Flask Sequence
 
 ## Where this is going
 
-By the end of this sequence, you will build your own web application from scratch — a Flask app that creates, reads, updates, and deletes data in a database. That application becomes the foundation for your **IB Computer Science Internal Assessment**.
+By the end of this sequence, you will build a web application from scratch — a Flask app that creates, reads, updates, and deletes data in a database. A CRUD app.
 
-This workbook describes the steps to get there. Six assignments, six weeks, one new skill cluster per week.
+This is not the IA. This is the **minimum build path** to get you to the point where the IA is even possible. If you cannot build a basic CRUD app, you cannot build an IA. These skills are table stakes — the things you need to have *before* you start thinking about your own project, your own client, your own data model.
+
+Week 6 is where you prove it: you'll design and build a complete CRUD application on your own. Think of it as a dress rehearsal for the complexity of the IA, not a mini version of the assessment itself.
 
 ```
 Weeks 1-3: Record of Tasks (main quest)
@@ -21,7 +23,7 @@ Weeks 4-5: Birthdays (side quest)
   5. flask-birthdays-orm    SQLAlchemy + Flask-WTF (group merge)
 
 Week 6: Record of Tasks (return with new powers)
-  6. flask-plateau          Full CRUD rebuild
+  6. flask-plateau          Full CRUD rebuild — your dress rehearsal
 ```
 
 Each week builds on the last. The starter code always runs before you write anything. You never start from nothing.

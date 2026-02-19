@@ -138,12 +138,12 @@ Take stock. You now have:
 - **`templates/`** — folder of HTML files, one per page
 - **`render_template()`** — the bridge between them
 
-That's the skeleton of every Flask project. Your IA will have this same structure. The difference is that your IA will do something with *data* — accept user input, store it, display it, let the user change and delete it. That's called CRUD (Create, Read, Update, Delete), and it's where this whole sequence is headed.
+That's the skeleton of every Flask project. Any CRUD app you build later — including the one you'll design yourself in Week 6 — starts from exactly this structure. Right now the skeleton doesn't do much. Over the next five weeks, you'll add muscles to it: dynamic data, forms, databases, and the tools to manage all three.
 
 ## What's coming next
 
-Right now these are static HTML files — every visitor sees the exact same page. That's fine for Week 1. But your IA won't serve the same page to everyone. It will show data that changes — a list of tasks, a set of records, whatever your project tracks.
+Right now these are static HTML files — every visitor sees the exact same page. That's fine for Week 1. But a real application shows data that changes — a list of tasks, a set of records, whatever the app tracks.
 
 `render_template()` is actually capable of more than just reading a file. It can fill in blanks and run simple logic inside HTML — using a system called **Jinja2**. That's Week 2.
 
-For now, just get comfortable with the pattern: Python handles routes, HTML files handle pages. Every week adds one more capability to this skeleton until, by Week 6, you can build a complete web application on your own.
+For now, just get comfortable with the pattern: Python handles routes, HTML files handle pages. Every week adds one more capability to this skeleton until, by Week 6, you build a complete web application on your own.
