@@ -130,8 +130,20 @@ def somepage():
 The filename you pass to `render_template()` must match an actual file inside `templates/`. If Flask can't find it, you'll get a `TemplateNotFound` error. Check your spelling and make sure the file is in the right folder.
 :::
 
-## What's coming in Week 2
+## What you've built so far
 
-Right now these are static HTML files — every visitor sees the exact same page. That's fine for Week 1. But what if you wanted to show different content depending on who visits, or display a list of data from Python?
+Take stock. You now have:
 
-`render_template()` is actually capable of more than just reading a file. It can fill in blanks and run simple logic inside HTML — using a system called **Jinja2**. That's Week 2. For now, just get comfortable with the pattern: Python handles routes, HTML files handle pages.
+- **`app.py`** — Python file with routes that map URLs to functions
+- **`templates/`** — folder of HTML files, one per page
+- **`render_template()`** — the bridge between them
+
+That's the skeleton of every Flask project. Your IA will have this same structure. The difference is that your IA will do something with *data* — accept user input, store it, display it, let the user change and delete it. That's called CRUD (Create, Read, Update, Delete), and it's where this whole sequence is headed.
+
+## What's coming next
+
+Right now these are static HTML files — every visitor sees the exact same page. That's fine for Week 1. But your IA won't serve the same page to everyone. It will show data that changes — a list of tasks, a set of records, whatever your project tracks.
+
+`render_template()` is actually capable of more than just reading a file. It can fill in blanks and run simple logic inside HTML — using a system called **Jinja2**. That's Week 2.
+
+For now, just get comfortable with the pattern: Python handles routes, HTML files handle pages. Every week adds one more capability to this skeleton until, by Week 6, you can build a complete web application on your own.

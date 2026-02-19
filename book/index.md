@@ -4,7 +4,11 @@ name: Flask Sequence
 
 # Flask Sequence — IB Computer Science
 
-A ladder of six assignments that take you from zero Flask knowledge to a full CRUD web application. Each assignment builds on the last. You never start from nothing.
+## Where this is going
+
+By the end of this sequence, you will build your own web application from scratch — a Flask app that creates, reads, updates, and deletes data in a database. That application becomes the foundation for your **IB Computer Science Internal Assessment**.
+
+This workbook describes the steps to get there. Six assignments, six weeks, one new skill cluster per week.
 
 ```
 Weeks 1-3: Record of Tasks (main quest)
@@ -20,7 +24,15 @@ Week 6: Record of Tasks (return with new powers)
   6. flask-plateau          Full CRUD rebuild
 ```
 
-Each week introduces one cluster of new skills. The starter code always runs before you write anything.
+Each week builds on the last. The starter code always runs before you write anything. You never start from nothing.
+
+## This is a sequence of things to DO
+
+:::alert{warn}
+Reading this workbook and thinking "yeah, I get it" is not the same as doing it. Every page describes something you should **build, run, and test** in your own repo. If you haven't typed the code and seen it work in a browser, you haven't done the step.
+:::
+
+The concepts here are not hard one at a time. They become hard when you skip steps, fall behind, and have to learn three things at once. The bumpers are here. Stay in the lane.
 
 ## How to use this workbook
 
