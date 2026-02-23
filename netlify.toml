@@ -1,0 +1,3 @@
+[build]
+  command = "npx -y hyperbook build"
+  publish = ".hyperbook/out"

@@ -9,6 +9,6 @@
   "colors": {
     "brand": "#336699"
   },
-  "basePath": "/flask-sequence-workbook",
+  "basePath": "",
   "allowDangerousHtml": true
 }
