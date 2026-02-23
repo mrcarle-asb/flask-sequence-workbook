@@ -1,6 +1,6 @@
 ---
 name: Common Mistakes
-index: 5
+index: 6
 ---
 
 # Common Mistakes

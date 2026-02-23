@@ -78,28 +78,6 @@ This renders as nothing. No error — just blank. The template doesn't know what
 Using the same name on both sides (`tasks=tasks`) is clearest and most common. But you must understand the mapping in case you inherit code that uses different names.
 :::
 
-## Rename the variable
-
-Now that you understand how the mapping works, rename `sample_tasks` to `tasks` in your Python code. The `sample_` prefix was useful for learning the left-side/right-side distinction, but from here on we'll use matching names — that's the standard convention you'll see in Flask code everywhere.
-
-```python
-# Before
-sample_tasks = [...]
-
-@app.route("/tasks")
-def tasks():
-    return render_template("tasks.html", tasks=sample_tasks)
-
-# After
-tasks = [...]
-
-@app.route("/tasks")
-def show_tasks():
-    return render_template("tasks.html", tasks=tasks)
-```
-
-Notice `show_tasks` instead of `tasks` for the function name — Python won't let you have a function and a variable with the same name in the same scope. A descriptive verb prefix (`show_`, `list_`, `get_`) is common practice.
-
 ## Passing a list of dictionaries
 
 This is the pattern you'll use constantly. Your Python route has a list of data:
@@ -112,7 +90,7 @@ tasks = [
 ]
 
 @app.route("/tasks")
-def show_tasks():
+def list_tasks():
     return render_template("tasks.html", tasks=tasks)
 ```
 

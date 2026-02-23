@@ -1,6 +1,6 @@
 ---
 name: Common Mistakes
-index: 6
+index: 7
 ---
 
 # Common Mistakes
@@ -81,6 +81,22 @@ The filename you pass to `render_template()` must exactly match a file inside `t
 ## Forgetting to save before reloading
 
 With `--debug` mode, Flask auto-reloads when you save. But it can't reload what you haven't saved. If your changes aren't appearing, check that you've actually saved the file (`Cmd+S` / `Ctrl+S`).
+
+## Broken image or no image
+
+Two different problems look similar but mean different things:
+
+- **Broken image icon** (cracked rectangle shows in the page): Flask found the URL but the file isn't there. Check that the image is inside the `static/` folder and that the filename matches exactly — including capitalization.
+- **Nothing visible at all**: The `<img>` tag is missing from the HTML, or there's a typo in the tag. Use **CMD-F** and search for `<img` across your files to confirm it exists.
+
+Common path mistake:
+```html
+<!-- WRONG — Flask doesn't serve files from project root -->
+<img src="photo.jpg" alt="...">
+
+<!-- RIGHT — files in static/ are served at /static/ -->
+<img src="/static/photo.jpg" alt="...">
+```
 
 ## The server "isn't working" (it's still running)
 

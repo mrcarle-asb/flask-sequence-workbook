@@ -1,6 +1,6 @@
 ---
 name: Check Yourself
-index: 6
+index: 7
 ---
 
 # Check Yourself

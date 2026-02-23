@@ -1,6 +1,6 @@
 ---
 name: Check Yourself
-index: 7
+index: 8
 ---
 
 # Check Yourself
@@ -39,6 +39,7 @@ Separation of concerns. Python handles the logic (which function runs for which 
 - [ ] Use a route variable to capture part of the URL?
 - [ ] Add `<a href>` links between your pages?
 - [ ] Create an HTML file in `templates/` and serve it with `render_template()`?
+- [ ] Add an image to `static/` and display it with `<img src="/static/...">`?
 - [ ] Stop the server with `Ctrl+C` and start it again?
 :::
 

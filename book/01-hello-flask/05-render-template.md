@@ -140,6 +140,30 @@ Take stock. You now have:
 
 That's the skeleton of every Flask project. Any CRUD app you build later — including the one you'll design yourself in Week 6 — starts from exactly this structure. Right now the skeleton doesn't do much. Over the next five weeks, you'll add muscles to it: dynamic data, forms, databases, and the tools to manage all three.
 
+## Passing data to a template (preview)
+
+`render_template()` can do more than just read a file — it can pass Python values into the HTML. You'll use this properly in Week 2, but here's the shape of it so it's not a surprise:
+
+```python
+# In app.py:
+@app.route("/greet/<name>")
+def greet(name):
+    return render_template("greet.html", name=name)
+#                                        ^^^^ keyword argument → available in template
+```
+
+```html
+<!-- In greet.html: -->
+<h1>Hello, {{ name }}!</h1>
+<!--              ^^^^ must match the keyword argument name exactly -->
+```
+
+The keyword argument name on the Python side (`name=name`) becomes the variable name inside `{{ }}` in the template. They have to match.
+
+:::alert{warn}
+**Common mistake:** passing `name=name` in Python but writing `{{ Sarah }}` or `{{ YourName }}` in the template. The curly braces aren't a label — they look up the variable you passed. If the names don't match, you'll get an error or an empty slot.
+:::
+
 ## What's coming next
 
 Right now these are static HTML files — every visitor sees the exact same page. That's fine for Week 1. But a real application shows data that changes — a list of tasks, a set of records, whatever the app tracks.
