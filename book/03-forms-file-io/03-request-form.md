@@ -60,6 +60,60 @@ writer.writerow({"project_title": project_title, ...})
 
 Every field follows this exact pattern. Read all five fields the same way, then pass them all to the CSV writer together.
 
+## `request.form` vs `request.args`
+
+If you built a greet route in Week 1 or Week 2, you may have already used `request.args` — possibly without fully knowing what it was. These two objects look the same but carry data from different places.
+
+::::tabs{id="args-vs-form"}
+
+:::tab{title="request.args — GET form data"}
+```html
+<!-- Form with no method (defaults to GET) -->
+<form action="/greet">
+    <input type="text" name="name">
+    <button type="submit">Go</button>
+</form>
+```
+```python
+# URL becomes: /greet?name=Alice
+@app.route("/greet")
+def greet():
+    name = request.args.get("name")
+```
+The data travels in the **URL** as query string parameters (`?name=Alice`). You can see it in the address bar. `request.args` reads it.
+:::
+
+:::tab{title="request.form — POST form data"}
+```html
+<!-- Form with method="POST" -->
+<form action="/input" method="POST">
+    <input type="text" name="title">
+    <button type="submit">Save</button>
+</form>
+```
+```python
+# URL stays: /input — data is in the request body, not the URL
+@app.route("/input", methods=["GET", "POST"])
+def input_task():
+    if request.method == "POST":
+        title = request.form["title"]
+```
+The data travels in the **request body**, invisible in the URL. `request.form` reads it.
+:::
+
+::::
+
+The practical difference for this week:
+
+| | `request.args` | `request.form` |
+|---|---|---|
+| Form method | GET (or no method) | POST |
+| Data visible in URL? | Yes — `?key=value` | No |
+| How to read | `request.args.get("key")` | `request.form["key"]` |
+| Good for | Short lookups, filters, searches | Saving data, sensitive input |
+
+`request.args` is fine for a greet page where the name is in the URL. It's wrong for saving tasks — you don't want form data appearing in the address bar, and GET requests aren't meant to modify data. Use `request.form` with `method="POST"` for anything that writes.
+
 ## Importing `request`
 
 `request` comes from Flask. Make sure your import line includes it:
