@@ -8,7 +8,7 @@ index: 6
 You have the concepts. Now apply them. Your starter code has a working display and a stub input form. Your job is two things: build the form in `input.html`, and complete the POST handler in `app.py`.
 
 :::alert{warn}
-Do not start writing until you've done Step 0. Reading the working code first is not optional.
+Do not start writing code until you've done Steps 0 and 1. Understanding the working code first is not optional.
 :::
 
 ## Step 0: Study the working display
@@ -28,7 +28,23 @@ Once you can trace the full read path, you understand the shape of the data you 
 
 ---
 
-## Step 1: Build the form in `input.html`
+## Step 1: Draw the system
+
+Before you write any code, draw a diagram — on paper or digitally — that shows how the `/display` page gets built. Trace the full journey from the moment a browser requests `/display` to the moment it receives a finished HTML page.
+
+Your diagram should include all of these components:
+
+- **`app.py`** — specifically the `display` route
+- **`tasks.csv`** — where the data lives
+- **`render_template()`** — the hand-off from Python to HTML
+- **`base.html`** — the shared page structure
+- **`display.html`** — the template that fills it in
+
+Show how they connect in sequence. Label your arrows. This doesn't need to be formal — just clear enough that someone unfamiliar with Flask could follow the data flow.
+
+---
+
+## Step 2: Build the form in `input.html`
 
 Open `templates/input.html`. The `<datalist>` is already there. Build your `<form>` around it.
 
@@ -70,7 +86,7 @@ Your form needs:
 
 ---
 
-## Step 2: Complete the POST handler in `app.py`
+## Step 3: Complete the POST handler in `app.py`
 
 Open `app.py`. Find the `if request.method == "POST":` block — it's all TODO comments. Replace the `pass` with working code:
 
@@ -103,7 +119,7 @@ Open `tasks.csv` directly and confirm the row is there. Then restart the server 
 
 ---
 
-## Step 3: Verify the filtered view
+## Step 4: Verify the filtered view
 
 On `/display`, click one of the project name links. You should see only that project's tasks, with a heading showing the project name and a "← All tasks" link.
 
@@ -111,7 +127,7 @@ Try typing your project name directly into the URL bar: `/display/Your Project N
 
 ---
 
-## Step 4 (Stretch): Required fields and direct URL
+## Step 5 (Stretch): Required fields and direct URL
 
 Add `required` to your form inputs:
 
